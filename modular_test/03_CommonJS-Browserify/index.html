@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_CommonJS-Browserify</title>
+</head>
+<body>
+<p>npm install uniq</p>
+<p>
+  全局: npm install browserify -g
+  局部: npm install browserify --save-dev
+</p>
+  <p>
+  /*
+  --dev:开发依赖，只有在开发环境下使用
+  	（开发环境，测试环境，生产环境）
+  */
+  </p>
+<p>
+4. 打包处理js:
+  browserify js/src/app.js -o js/dist/bundle.js
+    // -o代表output,即将前边的文件打包生成在后边的文件夹目录下
+
+</p>
+<!--引入的js必须有一定顺序-->
+<script type="text/javascript" src="js/dist/bundle.js"></script>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

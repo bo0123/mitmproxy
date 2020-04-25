@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>01_全局function模式</title>
+</head>
+<body>
+问题: Global被污染了, 很容易引起命名冲突
+<script type='text/javascript' src='module1.js'></script>
+<script type='text/javascript' src='module2.js'></script>
+<script type='text/javascript'>
+    console.info('111')
+    // let data = '修改后的数据' // 模块1中已经定义了data变量，重复定义同名变量报错
+   foo() // module2模块中的foo()方法覆盖了module1模块中的foo()方法
+   bar()
+</script>
+</body>
+</html>

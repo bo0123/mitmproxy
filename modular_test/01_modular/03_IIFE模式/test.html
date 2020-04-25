@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_IIFE模式</title>
+</head>
+<body>
+IIFE模式: 匿名函数自调用(闭包)
+IIFE : immediately-invoked function expression(立即调用函数表达式)
+作用: 数据是私有的, 外部只能通过暴露的方法操作
+问题: 如果当前这个模块依赖另一个模块怎么办
+<script type="text/javascript" src="module1.js"></script>
+<script type="text/javascript">
+  myModule.foo() // foo() atguigu.com
+  myModule.bar() // bar() atguigu.com
+  //myModule.otherFun()  //myModule.otherFun is not a function
+  console.log(myModule.data) //undefined 不能访问模块内部数据
+  myModule.data = 'xxxx' //不能修改的模块内部的data，这只是给myModule对象增加了一个data属性
+  myModule.foo() // 没有改变，foo() atguigu.com
+
+</script>
+</body>
+</html>
